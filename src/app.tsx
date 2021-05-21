@@ -1,4 +1,6 @@
-const A = ({ href, children, ...props }: { href: string }) => (
+import { FunctionComponent } from "preact"
+
+const A: FunctionComponent<{ href: string }> = ({ href, children, ...props }) => (
   <a class="relative pb-2 text-center group" href={href} {...props}>
     {children}
     <span class="absolute bottom-0 left-0 w-full h-0.5 bg-cyan-300 transition-transform duration-200 origin-left transform scale-x-0 group-hover:scale-100"></span>
